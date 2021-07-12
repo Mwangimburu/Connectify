@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Connectify</string>
+    <string name="sign_in">LOGIN</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="your_trusted_campaign_assistant">Your Trusted Campaign Assistant.</string>
+    <string name="sign_up_lg_pg">JOIN NOW</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

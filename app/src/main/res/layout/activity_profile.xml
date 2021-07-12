@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    tools:context=".ProfileActivity"
+    android:id="@+id/profile_layout"
+
+    >
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/profile_text"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?actionBarSize">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/back"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:src="@drawable/arrow_back" />-->
+
+<!--        <TextView-->
+<!--            -->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_toRightOf="@+id/back"-->
+<!--            android:text="Profile"-->
+<!--            android:textSize="20sp" />-->
+<!--        -->
+<!--    </RelativeLayout>-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbar"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/profile_picture_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_picture_profile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:transitionName="custom_transition"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/profile_holder"
+            app:civ_border_color="@color/google_blue"
+            app:civ_border_width="1dp" />
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/image_chooser"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginLeft="105dp"-->
+<!--            android:layout_marginTop="115dp"-->
+<!--            android:src="@drawable/camera_icon"-->
+<!--            app:civ_border_color="@color/google_blue"-->
+<!--            app:civ_border_width="1dp"-->
+<!--            app:civ_circle_background_color="@color/white" />-->
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/person_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_picture_layout"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/person_icon" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_picture_layout"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@id/person_icon"
+        android:hint="First Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_name"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@id/person_icon"
+        android:hint="Last Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:id="@+id/account_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/last_name"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/account_info" />
+
+    <TextView
+        android:id="@+id/account_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/last_name"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/account_info"
+        android:text="Account Info" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/account_details"
+        android:text="Account Details Will Appear Here."
+        android:layout_below="@id/account_type"
+        android:layout_toRightOf="@id/account_info"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_details"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/location_icon" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_details"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/location_icon"
+        android:text="Location" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_details"
+        android:text="Location Details Will Appear Here."
+        android:layout_below="@id/location"
+        android:layout_toRightOf="@id/location_icon"
+        android:layout_marginTop="5dp"
+        />
+
+
+</RelativeLayout>

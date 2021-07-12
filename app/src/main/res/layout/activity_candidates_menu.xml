@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CandidatesMenuActivity"
+
+    >
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/back_arrow"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="3dp"-->
+    <!--        android:layout_marginBottom="20dp"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:src="@drawable/arrow_back" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/menu_label"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:layout_toRightOf="@+id/back_arrow"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:text="Candidate Menu"-->
+    <!--        android:textSize="20sp" />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/grey_dark" />
+
+
+    <RelativeLayout
+        android:id="@+id/profile_section_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_line">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_picture_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile_holder"
+            android:transitionName="custom_transition"
+            app:civ_border_color="@color/grey_dark"
+            app:civ_border_width="1dp" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toRightOf="@id/profile_picture_menu"
+
+            />
+
+        <TextView
+            android:id="@+id/display_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/profile_picture_menu"
+            android:text="Christopher Mburu Mwangi"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/view_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@+id/profile_picture_menu"
+            android:text="View Your Profile" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_below="@+id/profile_section_layout"
+        android:background="@color/grey_dark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottom_line"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/list_view_layout" />
+
+
+</RelativeLayout>

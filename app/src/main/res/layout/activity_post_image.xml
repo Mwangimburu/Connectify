@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".updates.PostImageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_chooser"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/image_backgroung2"
+                android:scaleType="centerInside"
+                android:src="@drawable/camera_blue" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_chooser"
+                android:id="@+id/images"
+                />
+          
+
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/images"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_radius"
+                android:gravity="top"
+                android:hint="Type text here"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="3dp"
+                android:padding="5dp"
+                android:textCursorDrawable="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/post_image_btn"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Post"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/google_blue"
+
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

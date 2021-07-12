@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".GenerateTeamCodeActivity">
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/back_icon"-->
+    <!--        android:layout_width="50dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:src="@drawable/arrow_back" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/create_team"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginBottom="30dp"-->
+    <!--        android:text="Create Team \n       Code"-->
+    <!--        android:textSize="30sp" />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/custom_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/team_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/profile_holder"
+                    app:civ_border_color="@color/google_blue"
+                    app:civ_border_width="1dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/image_chooser_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/image_backgroung2"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/camera_blue" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/team_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:hint="Type team name here"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/team_desc"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/team_name"
+                android:layout_centerHorizontal="true"
+                android:hint="Team description"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/team_area"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/team_desc"
+                android:layout_centerHorizontal="true"
+                android:hint="Team operation area"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/generate_code"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/team_area"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:text="Generate Code"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/google_blue" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

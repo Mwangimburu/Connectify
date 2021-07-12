@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="2dp"
+    android:id="@+id/post_card_layout"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:paddingVertical="6dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_creator_profile"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile_holder"
+            app:civ_border_color="@color/grey_dark"
+            app:civ_border_width="1dp" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/post_creator_profile"
+            android:text="Agent name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/post_creator_profile"
+            android:text="time" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_creator_profile"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/post_creator_profile"
+            android:text="Post text" />
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/post_creator_profile">
+
+            <LinearLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"></LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"></LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/post_creator_profile"
+            android:layout_marginRight="80dp"
+            >
+
+            <ImageView
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                android:id="@+id/view_post"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/post_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/comment_post"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/comment_post"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/view_post"
+                android:src="@drawable/post_comment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_post"
+                app:layout_constraintRight_toLeftOf="@id/share_post"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <ImageView
+                android:id="@+id/share_post"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/comment_post"
+                android:src="@drawable/post_share"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/comment_post"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

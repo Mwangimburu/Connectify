@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".updates.PostTextActivity"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/background_radius"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="20dp"
+        android:inputType="textMultiLine"
+        android:hint="Type text here"
+        android:gravity="top"
+        android:padding="5dp"
+        android:textCursorDrawable="@null"
+        android:lineSpacingExtra="3dp"
+        android:layout_centerHorizontal="true"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/post_text_btn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Post"
+        app:cornerRadius="20dp"
+        app:strokeColor="@color/google_blue"
+        android:layout_marginTop="20dp"
+
+        />
+
+
+
+
+
+
+</RelativeLayout>
